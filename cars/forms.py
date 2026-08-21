@@ -18,3 +18,4 @@ class CarModelForm(forms.ModelForm):
         factory_year = self.cleaned_data.get('factory_year')
         if factory_year < 1974:
             self.add_error('factory_year', 'Não é possivel cadastrar carros fabricado antes de 1974.')
+        return factory_year
